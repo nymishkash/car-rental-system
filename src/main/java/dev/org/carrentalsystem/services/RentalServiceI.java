@@ -4,7 +4,7 @@ import dev.org.carrentalsystem.models.Rental;
 
 import java.util.List;
 
-public interface RentalService {
+public interface RentalServiceI {
     void rent(Rental rental);
     void cancelRental(Rental rental);
     void updateRental(Rental rental);

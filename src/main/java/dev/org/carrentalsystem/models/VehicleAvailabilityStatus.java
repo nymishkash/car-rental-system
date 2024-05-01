@@ -1,6 +1,6 @@
 package dev.org.carrentalsystem.models;
 
-public enum AvailabilityStatus {
+public enum VehicleAvailabilityStatus {
     AVAILABLE,
     UNAVAILABLE
 }

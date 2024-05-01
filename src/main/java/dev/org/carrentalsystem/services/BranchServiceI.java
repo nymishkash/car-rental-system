@@ -5,8 +5,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface BranchService {
-    void addNewBranch(Branch branch);
+@Service
+public interface BranchServiceI {
+    Branch addNewBranch(Branch branch);
     void updateBranch(Branch branch);
     void deleteBranch(Long branchID);
     Branch getBranchById(Long branchID);

@@ -2,7 +2,7 @@ package dev.org.carrentalsystem.services;
 
 import dev.org.carrentalsystem.models.Customer;
 
-public interface CustomerService {
+public interface CustomerServiceI {
     void createCustomer(Customer customer);
     void updateCustomer(Customer customer);
     void deleteCustomer(Long id);

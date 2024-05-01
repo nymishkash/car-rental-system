@@ -2,17 +2,19 @@ package dev.org.carrentalsystem.services;
 
 import dev.org.carrentalsystem.models.Branch;
 import dev.org.carrentalsystem.repositories.BranchRepository;
-import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-public class BranchService implements BranchServiceI {
+@Service
+public class BranchServiceSelf implements BranchServiceI {
 
     private BranchRepository branchRepository;
 
-    BranchService(BranchRepository branchRepository) {
-        this.branchRepository = branchRepository;
+    @Override
+    public Branch addNewBranch(Branch branch) {
+        return branchRepository.save(branch);
     }
 
     @Override
@@ -25,11 +27,6 @@ public class BranchService implements BranchServiceI {
         else {
             return null;
         }
-    }
-
-    @Override
-    public void addNewBranch(Branch branch) {
-
     }
 
     @Override

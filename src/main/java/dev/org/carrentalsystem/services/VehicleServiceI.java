@@ -1,11 +1,10 @@
 package dev.org.carrentalsystem.services;
 
 import dev.org.carrentalsystem.models.Vehicle;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface VehicleService {
+public interface VehicleServiceI {
 
     Vehicle getVehicleById(Long id);
     List<Vehicle> getAllVehicles();
