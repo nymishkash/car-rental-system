@@ -16,7 +16,6 @@ import lombok.Setter;
 @Entity
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long customerID;
     private String name;
     private String drivingLicenseNumber;

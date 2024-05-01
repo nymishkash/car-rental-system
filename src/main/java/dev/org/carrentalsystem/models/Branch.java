@@ -14,6 +14,7 @@ import lombok.Setter;
 @Table(name = "branch")
 public class Branch {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long branchID;
     private String branchLocation;
     @ManyToOne(cascade = CascadeType.PERSIST)
