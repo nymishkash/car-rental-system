@@ -1,28 +1,23 @@
 package dev.org.carrentalsystem.repositories;
 
-import dev.org.carrentalsystem.models.Branch;
+import dev.org.carrentalsystem.models.Vehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface BranchRepository extends JpaRepository<Branch, Long> {
+public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
 
     @Override
-    Branch save(Branch branch);
+    Vehicle save(Vehicle vehicle);
 
     @Override
-    Optional<Branch> findById(Long id);
+    Optional<Vehicle> findById(Long id);
 
     @Override
-    List<Branch> findAll();
-
-    @Override
-    void delete(Branch branch);
+    void delete(Vehicle vehicle);
 
     @Override
     void deleteById(Long id);
-
 }

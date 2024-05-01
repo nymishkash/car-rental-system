@@ -8,8 +8,7 @@ import java.util.List;
 @Service
 public interface BranchServiceI {
     Branch addNewBranch(Branch branch);
-    void updateBranch(Branch branch);
-    void deleteBranch(Long branchID);
-    Branch getBranchById(Long branchID);
-    List<Branch> getBranches();
+    Branch updateBranch(Branch branch);
+    void deleteBranch(Branch branch);
+    List<Branch> getAllBranches();
 }

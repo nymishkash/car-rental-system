@@ -20,22 +20,19 @@ public class BranchService implements BranchServiceI{
     }
 
     @Override
-    public void updateBranch(Branch branch) {
-
-    }
-
-    @Override
-    public void deleteBranch(Long branchID) {
-
-    }
-
-    @Override
-    public Branch getBranchById(Long branchID) {
+    public Branch updateBranch(Branch branch) {
         return null;
     }
 
     @Override
-    public List<Branch> getBranches() {
-        return List.of();
+    public void deleteBranch(Branch branch) {
+
     }
+
+    public List<Branch> getAllBranches() {
+        return branchRepo.findAll();
+    }
+
+
+
 }

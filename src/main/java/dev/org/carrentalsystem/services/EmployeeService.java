@@ -5,6 +5,7 @@ import dev.org.carrentalsystem.repositories.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmployeeService implements EmployeeServiceI{
@@ -14,10 +15,15 @@ public class EmployeeService implements EmployeeServiceI{
         this.employeeRepo = employeeRepo;
     }
 
+
     @Override
     public Employee createEmployee(Employee employee) {
-        employeeRepo.save(employee);
-        return employee;
+        return employeeRepo.save(employee);
+    }
+
+    @Override
+    public Optional<Employee> getEmployee(Long id) {
+        return Optional.ofNullable(employeeRepo.getById(id));
     }
 
     @Override
@@ -31,12 +37,7 @@ public class EmployeeService implements EmployeeServiceI{
     }
 
     @Override
-    public Employee getEmployee(Long id) {
-        return null;
-    }
-
-    @Override
     public List<Employee> getAllEmployees() {
-        return List.of();
+        return employeeRepo.findAll();
     }
 }

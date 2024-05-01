@@ -1,8 +1,0 @@
--- CREATE TABLE branch
--- (
---     branchId   BIGINT AUTO_INCREMENT NOT NULL,
---     created_at datetime NULL,
---     updated_at datetime NULL,
---     title      VARCHAR(255) NULL,
---     CONSTRAINT pk_category PRIMARY KEY (id)
--- );

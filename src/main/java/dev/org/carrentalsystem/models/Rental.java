@@ -16,7 +16,8 @@ import java.util.Date;
 public class Rental {
     @Id
     private String rentalID;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn
     private Vehicle vehicle;
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn

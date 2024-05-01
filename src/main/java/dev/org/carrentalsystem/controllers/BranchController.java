@@ -26,4 +26,9 @@ public class BranchController {
     public Branch saveBranch(@RequestBody Branch branch) {
         return branchService.addNewBranch(branch);
     }
+
+    @GetMapping("/all")
+    public List<Branch> getAllBranches() {
+        return branchService.getAllBranches();
+    }
 }

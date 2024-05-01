@@ -22,6 +22,6 @@ public class Vehicle {
     private Float mileage;
     @ManyToOne
     private Branch branch;
-    VehicleAvailabilityStatus availabilityStatus;
+    VehicleAvailabilityStatus availabilityStatus = VehicleAvailabilityStatus.AVAILABLE;
 
 }
