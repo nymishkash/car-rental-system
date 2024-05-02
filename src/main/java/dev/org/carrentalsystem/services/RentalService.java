@@ -3,17 +3,19 @@ package dev.org.carrentalsystem.services;
 import dev.org.carrentalsystem.models.Rental;
 import dev.org.carrentalsystem.repositories.EmployeeRepository;
 import dev.org.carrentalsystem.repositories.RentalRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class RentalService implements RentalServiceI{
     RentalRepository rentalRepo;
     public RentalService(RentalRepository rentalRepo) {
         this.rentalRepo = rentalRepo;
     }
     @Override
-    public void rent(Rental rental) {
-
+    public Rental rent(Rental rental) {
+        return rentalRepo.save(rental);
     }
 
     @Override

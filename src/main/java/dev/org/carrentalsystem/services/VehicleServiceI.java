@@ -9,7 +9,7 @@ public interface VehicleServiceI {
     Vehicle getVehicleById(Long id);
     List<Vehicle> getAllVehicles();
     void updateVehicle(Vehicle vehicle);
-    void createVehicle(Vehicle vehicle);
+    Vehicle createVehicle(Vehicle vehicle);
     void deleteVehicle(Long id);
 
 }

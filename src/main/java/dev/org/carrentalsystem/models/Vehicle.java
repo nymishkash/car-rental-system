@@ -14,13 +14,14 @@ import lombok.Setter;
 public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String vehicleID;
+    private Long vehicleID;
     private String make;
     private String model;
     private String year;
     private String licensePlate;
     private Float mileage;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn
     private Branch branch;
     VehicleAvailabilityStatus availabilityStatus = VehicleAvailabilityStatus.AVAILABLE;
 
