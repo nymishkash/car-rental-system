@@ -20,7 +20,7 @@ public class RentalService implements RentalServiceI{
 
     @Override
     public void cancelRental(Rental rental) {
-
+        rentalRepo.delete(rental);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class RentalService implements RentalServiceI{
 
     @Override
     public void deleteRental(Rental rental) {
-
+        rentalRepo.delete(rental);
     }
 
     @Override

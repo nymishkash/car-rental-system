@@ -35,7 +35,17 @@ public class CustomerService implements CustomerServiceI{
     }
 
     @Override
+    public void deleteCustomer(Customer customer) {
+        customerRepository.delete(customer);
+    }
+
+    @Override
     public Customer getCustomer(Long id) {
         return null;
+    }
+
+    @Override
+    public void deleteCustomerById(Long id) {
+        customerRepository.deleteById(id);
     }
 }

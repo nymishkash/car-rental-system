@@ -20,6 +20,11 @@ public class VehicleService implements VehicleServiceI{
     }
 
     @Override
+    public void deleteVehicle(Long id) {
+
+    }
+
+    @Override
     public Vehicle getVehicleById(Long id) {
         return null;
     }
@@ -35,7 +40,12 @@ public class VehicleService implements VehicleServiceI{
     }
 
     @Override
-    public void deleteVehicle(Long id) {
+    public void deleteVehicle(Vehicle vehicle) {
+        vehicleRepo.delete(vehicle);
+    }
 
+    @Override
+    public void deleteVehicleById(Long id) {
+        vehicleRepo.deleteById(id);
     }
 }

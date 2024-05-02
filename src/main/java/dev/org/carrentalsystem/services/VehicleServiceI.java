@@ -12,4 +12,7 @@ public interface VehicleServiceI {
     Vehicle createVehicle(Vehicle vehicle);
     void deleteVehicle(Long id);
 
+    void deleteVehicle(Vehicle vehicle);
+
+    void deleteVehicleById(Long id);
 }
