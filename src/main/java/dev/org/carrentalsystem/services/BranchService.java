@@ -15,8 +15,7 @@ public class BranchService implements BranchServiceI{
 
     @Override
     public Branch addNewBranch(Branch branch) {
-        branchRepo.save(branch);
-        return null;
+        return branchRepo.save(branch);
     }
 
     @Override
